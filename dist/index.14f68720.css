@@ -44,13 +44,6 @@ html, body {
     box-sizing: border-box;
 }
 
-html,
-html *,
-body,
-body * {
-  cursor: none;
-}
-
 body {
 	--color-text: #fff;
 	--color-bg: #0a0a0a;
@@ -155,7 +148,7 @@ a:focus-visible {
 }
 
 main {
-	padding: 1.5rem;
+	padding: 2.0rem;
 	display: grid;
 	height: 100vh;
 	align-content: space-between;
@@ -179,7 +172,7 @@ main {
 .frame__title {
 	font-size: 1rem;
 	margin: 0;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 .frame__links {
@@ -205,7 +198,8 @@ main {
 	display: inline-block;
 	transform-origin: 0% 50%;
 	will-change: transform;
-	color: goldenrod;
+	color: #fff;
+	font-weight: 800;
 }
 
 .content {
@@ -220,11 +214,12 @@ main {
 
 .heading {
 	grid-area: heading;
-	font-size: var(--font-size-small);
+	font-size: var(--font-size-xlarge);
 	margin: 0 0 2rem 0;
 	font-weight: normal;
 	align-self: start;
 	line-height: 1.4;
+	border-bottom: 1px #fff solid;
 }
 
 .heading strong {
@@ -248,6 +243,21 @@ main {
 
 .deco {
 	grid-area: deco;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.image1 {
+  position: relative;
+  bottom: 50px;
+  right: 130px;
+}
+
+.image2 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .deco__img-wrap {
@@ -287,7 +297,7 @@ main {
 	overflow: hidden;
     position: relative;
     padding: 0 0 5px;
-	font-size: var(--font-size-small);
+	font-size: var(--font-size-xlarge);
 }
 
 .menu--open ~ .menu-link,
@@ -549,7 +559,7 @@ main {
 		padding-bottom: 0.5vw;
 	}
 	.frame {
-		margin: 0;
+		margin: 1rem 0;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
@@ -572,29 +582,5 @@ main {
 	}
 }
 
-.cursor-dot,
-.cursor-dot-outline {
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-	border-style: groove;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out,
-                transform 0.3s ease-in-out;
-}
 
-.cursor-dot {
-    width: 18px;
-    height: 18px;
-    background-color: #dd9c22;
-}
-
-.cursor-dot-outline {
-    width: 18px;
-    height: 18px;
-    background-color: rgba(#dd9c22, 0.5);
-}
 /*# sourceMappingURL=index.14f68720.css.map */

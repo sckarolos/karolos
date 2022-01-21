@@ -15,7 +15,7 @@
 		<main>
 			
 			<div class="frame">
-				<h1 class="frame__title">Content Preview and Menu Animation</h1>
+				<h1 class="frame__title">It does not look like one, but this is a serious website!</h1>
 			</div>
 
 			<nav class="menu">
@@ -28,7 +28,6 @@
 				<button class="close close--menu oh unbutton" aria-label="Close menu"><span class="oh__inner">&#10005;</span></button>
 			</nav>
 
-			<!-- <button class="menu-link oh unbutton underline"><span class="oh__inner">info</span></button> -->
 			<button class="menu-link oh unbutton"><span class="oh__inner">info</span></button>
 
 			<h2 class="heading oh"><span class="oh__inner">karolos.io</span></h2>
@@ -39,7 +38,9 @@
 			
 			<div class="deco" aria-hidden="true">
 				<!-- <div class="deco__img-wrap deco__img-wrap--upper"><div class="deco__img deco__img--upper"></div></div> -->
-				<div class="deco__img-wrap deco__img-wrap--lower"><div class="deco__img deco__img--lower"></div></div>
+				<!-- <div class="deco__img-wrap deco__img-wrap--lower"><div class="deco__img deco__img--lower"></div></div> -->
+				<img class="image1" src="img/monkey.gif" width="332" height="250" />
+				<img class="image2" src="img/tv.png" width="500" height="322" />
 			</div>
 			
 			<section class="details-wrap">
@@ -196,137 +197,7 @@
 				<button class="close close--details oh unbutton" aria-label="Close details"><span class="oh__inner">&#10005;</span></button>
 			</section>
 		</main>
-		<div class="cursor-dot-outline"></div>
-		<div class="cursor-dot"></div>	
 		<script type="module" src="js/index.js"></script>
-		<script>
-			var cursor = {
-    delay: 8,
-    _x: 0,
-    _y: 0,
-    endX: (window.innerWidth / 2),
-    endY: (window.innerHeight / 2),
-    cursorVisible: true,
-    cursorEnlarged: false,
-    $dot: document.querySelector('.cursor-dot'),
-    $outline: document.querySelector('.cursor-dot-outline'),
-    
-    init: function() {
-        // Set up element sizes
-        this.dotSize = this.$dot.offsetWidth;
-        this.outlineSize = this.$outline.offsetWidth;
-        
-        this.setupEventListeners();
-        this.animateDotOutline();
-    },
-    
-//     updateCursor: function(e) {
-//         var self = this;
-        
-//         console.log(e)
-        
-//         // Show the cursor
-//         self.cursorVisible = true;
-//         self.toggleCursorVisibility();
 
-//         // Position the dot
-//         self.endX = e.pageX;
-//         self.endY = e.pageY;
-//         self.$dot.style.top = self.endY + 'px';
-//         self.$dot.style.left = self.endX + 'px';
-//     },
-    
-    setupEventListeners: function() {
-        var self = this;
-        
-        // Anchor hovering
-        document.querySelectorAll('a').forEach(function(el) {
-            el.addEventListener('mouseover', function() {
-                self.cursorEnlarged = true;
-                self.toggleCursorSize();
-            });
-            el.addEventListener('mouseout', function() {
-                self.cursorEnlarged = false;
-                self.toggleCursorSize();
-            });
-        });
-        
-        // Click events
-        document.addEventListener('mousedown', function() {
-            self.cursorEnlarged = true;
-            self.toggleCursorSize();
-        });
-        document.addEventListener('mouseup', function() {
-            self.cursorEnlarged = false;
-            self.toggleCursorSize();
-        });
-  
-  
-        document.addEventListener('mousemove', function(e) {
-            // Show the cursor
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-
-            // Position the dot
-            self.endX = e.pageX;
-            self.endY = e.pageY;
-            self.$dot.style.top = self.endY + 'px';
-            self.$dot.style.left = self.endX + 'px';
-        });
-        
-        // Hide/show cursor
-        document.addEventListener('mouseenter', function(e) {
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-            self.$dot.style.opacity = 1;
-            self.$outline.style.opacity = 1;
-        });
-        
-        document.addEventListener('mouseleave', function(e) {
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-            self.$dot.style.opacity = 0;
-            self.$outline.style.opacity = 0;
-        });
-    },
-    
-    animateDotOutline: function() {
-        var self = this;
-        
-        self._x += (self.endX - self._x) / self.delay;
-        self._y += (self.endY - self._y) / self.delay;
-        self.$outline.style.top = self._y + 'px';
-        self.$outline.style.left = self._x + 'px';
-        
-        requestAnimationFrame(this.animateDotOutline.bind(self));
-    },
-    
-    toggleCursorSize: function() {
-        var self = this;
-        
-        if (self.cursorEnlarged) {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        } else {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-        }
-    },
-    
-    toggleCursorVisibility: function() {
-        var self = this;
-        
-        if (self.cursorVisible) {
-            self.$dot.style.opacity = 1;
-            self.$outline.style.opacity = 1;
-        } else {
-            self.$dot.style.opacity = 0;
-            self.$outline.style.opacity = 0;
-        }
-    }
-}
-
-cursor.init();s
-		</script>
 	</body>
 </html>
