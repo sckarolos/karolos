@@ -1,32 +1,29 @@
 {
-  "name": "SuperfluidLayout",
+  "name": "TypographyMotion",
   "version": "1.0.0",
   "description": "",
-  "default": "dist/index.html",
+  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html --open",
     "clean": "rm -rf dist/*",
-    "build:parcel": "parcel build src/index.html --no-content-hash --no-source-maps --public-url ./",
+    "build:parcel": "parcel build src/index.html --no-content-hash --no-minify --no-source-maps --public-url ./",
     "build": "npm run clean && npm run build:parcel"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/codrops/SuperfluidLayout.git"
+    "url": "git://github.com/codrops/TypographyMotionEffect.git"
   },
   "keywords": [],
   "author": "Codrops",
   "license": "MIT",
-  "homepage": "https://tympanus.net/codrops",
+  "homepage": "[HOMEPAGE]",
   "bugs": {
-    "url": "https://github.com/codrops/SuperfluidLayout/issues"
-  },
-  "devDependencies": {
-    "parcel": "latest"
+    "url": "https://github.com/codrops/TypographyMotionEffect/issues"
   },
   "dependencies": {
-    "gsap": "^3.7.1",
-    "imagesloaded": "^4.1.4",
-    "node-gyp-build": "^4.3.0",
-    "split-type": "^0.2.5"
+    "gsap": "^3.3.3",
+    "parcel-bundler": "^1.12.4",
+    "splitting": "^1.0.6",
+    "utils": "^0.3.1"
   }
 }

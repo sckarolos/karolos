@@ -1,24 +1,24 @@
-const imagesLoaded = require('imagesloaded');
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+// Gets the mouse position
+const getMousePos = e => {
+    return { 
+        x : e.clientX, 
+        y : e.clientY 
+    };
+};
 
 // Preload images
-const preloadImages = (selector) => {
+const preloadFonts = (id) => {
     return new Promise((resolve, reject) => {
-        imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve);
+        WebFont.load({
+            typekit: {
+                id: id
+            },
+            active: resolve
+        });
     });
 };
 
-// wrap each element of an array
-// elems - the array of elements to wrap
-// wrapType - type of wrapper ('div', 'span' etc)
-// wrapClass - wrapper class(s) 
-const wrapLines = (elems, wrapType, wrapClass) => {
-    elems.forEach(char => {
-          // add a wrap for every char (overflow hidden)
-          const wrapEl = document.createElement(wrapType);
-          wrapEl.classList = wrapClass;
-          char.parentNode.appendChild(wrapEl);
-          wrapEl.appendChild(char);
-      });
-  }
-
-export {preloadImages, wrapLines};
+export { lerp, getMousePos, preloadFonts };
