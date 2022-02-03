@@ -4,62 +4,201 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>karolos.io</title>
-		<meta name="description" content="Recreation of a letter stagger animation with GSAP and Splitting.js">
-		<meta name="keywords" content="stagger, gsap, letter, text, typography, animation, web design, javascript">
+		<meta name="description" content="Some experimental reveal animations on typographic elements as repeating pattern for a website design.">
+		<meta name="keywords" content="reveal, gsap, animation, web design, menu animation">
 		<meta name="author" content="Codrops">
-		<link rel="shortcut icon" href="/favicon.26242483.ico">
-		<link rel="stylesheet" href="https://use.typekit.net/lwc3axy.css">
-		<link rel="stylesheet" type="text/css" href="/base.98fd6c19.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<link rel="shortcut icon" href="/favicon.824cf0c5.ico">
+		<link rel="stylesheet" type="text/css" href="/index.d046a61c.css">
 		<script>document.documentElement.className = "js";
-
-var supportsCssVars = function supportsCssVars() {
-  var e,
-      t = document.createElement("style");
-  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+var supportsCssVars = function() {
+    var e, t = document.createElement("style");
+    return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
 };
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 
-supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	<script src="/base.98fd6c19.js"></script><link rel="stylesheet" href="/js.00a46daa.css"></head>
+</script>
+	</head>
 	<body class="loading">
 		<main>
-			<div class="frame">
-				<a class="frame__home">
-					<span class="frame__home-sub">karolos.io</span>
-				</a>
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">Typography Motion Effect</h1>
+			<nav class="menu">
+				<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-1">Velocity</a></span>
+				<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-2">Projectiles</a></span>
+				<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-3">Gravity</a></span>
+				<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-4">Quasimodo</a></span>
+				<button class="close close--menu oh unbutton" aria-label="Close menu"><span class="oh__inner">&#10005;</span></button>
+			</nav>
+
+			<button class="menu-link oh unbutton"><span class="oh__inner_about">about</span></button>
+
+			<h2 class="heading oh"><span class="oh__inner"><strong>karolos</strong></span></h2>
+			
+			<p class="content-primary">A software engineer and Tech Lead &mdash; driven by meaningful work </p>
+			
+			<p class="content-secondary">51.5072° N, 0.1276° W &mdash; AKA London</p>
+			
+			<div class="deco" aria-hidden="true">
+				<!-- <div class="deco__img-wrap deco__img-wrap--upper"><div class="deco__img deco__img--upper"></div></div> -->
+				<div class="deco__img-wrap deco__img-wrap--lower">
+					<div class="deco__img deco__img--lower">
+
+					</div>
 				</div>
-				<a class="frame__about">
-					<span class="frame__about-item frame__about-item--current">About</span>
-					<span class="frame__about-item">Close</span>
-				</a>
 			</div>
-			<div class="content">
-				<section class="content__item content__item--home content__item--current">
-					<p class="content__paragraph" data-splitting="">based <em>data</em> and <em>social</em></p>
-					<p class="content__paragraph" data-splitting="">engineer</p>
-					<figure class="content__figure">
-						<img class="content__figure-img" src="/1.dc197a9a.jpg" alt="Some image">
-						<figcaption class="content__figure-caption">We are here face to face with a crucial point in analytic realism. Realism argues that we have no alternative except either to regard analysis as falsifying, and thus commit ourselves to distrust of science as an organ of knowledge.</figcaption>
-					</figure>
-					<div class="content__item-credits">Recreation of the effect on <a href="http://www.danimorales-style.com/">Dani Morales</a> by <a href="https://dribbble.com/shots/11133412-Transitions-Fashion-stylist-Project">Thibaud Allie</a></div>
-				</section>
-				<section class="content__item content__item--about">
-					<p class="content__paragraph" data-splitting="">Johnathan Flynn is</p>
-					<p class="content__paragraph content__paragraph--right" data-splitting="">a Salt Lake City</p>
-					<p class="content__paragraph" data-splitting="">based <em>data</em> and <em>social</em></p>
-					<p class="content__paragraph" data-splitting="">engineer</p>
-					<figure class="content__figure">
-						<img class="content__figure-img" src="/1.dc197a9a.jpg" alt="Some image">
-						<figcaption class="content__figure-caption">We are here face to face with a crucial point in analytic realism. Realism argues that we have no alternative except either to regard analysis as falsifying, and thus commit ourselves to distrust of science as an organ of knowledge.</figcaption>
-					</figure>
-				</section>
-			</div>
+			
+			<section class="details-wrap">
+				<div class="details" id="details-1">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/3.3ef41889.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/5.f63eb06a.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/7.73eefc2c.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/9.a268fd13.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/12.275532b2.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/13.d56b81f4.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/14.ba458b07.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/15.a0526b83.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/16.80c37dc9.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/17.f6b9211e.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Velocity</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<div class="details" id="details-2">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/18.99f43708.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/19.32ff0ead.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/20.7b72d04f.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/21.8337e0bd.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/1.a45131b3.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/3.3ef41889.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/5.f63eb06a.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/7.73eefc2c.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/9.a268fd13.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/12.275532b2.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Projectiles</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<div class="details" id="details-3">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/21.8337e0bd.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/19.32ff0ead.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/17.f6b9211e.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/15.a0526b83.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/13.d56b81f4.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/12.275532b2.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/14.ba458b07.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/16.80c37dc9.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/18.99f43708.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/20.7b72d04f.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Gravity</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<div class="details" id="details-4">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/3.3ef41889.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/5.f63eb06a.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/7.73eefc2c.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/9.a268fd13.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/12.275532b2.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/13.d56b81f4.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/14.ba458b07.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/15.a0526b83.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/16.80c37dc9.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/17.f6b9211e.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Quasimodo</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<div class="details" id="details-5">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/21.8337e0bd.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/19.32ff0ead.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/17.f6b9211e.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/15.a0526b83.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/13.d56b81f4.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/12.275532b2.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/14.ba458b07.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/16.80c37dc9.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/18.99f43708.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/20.7b72d04f.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Hyperbolic</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<div class="details" id="details-6">
+					<div class="panel">
+						<img class="panel__img pos-1" src="/18.99f43708.jpg" alt="Some image">
+						<img class="panel__img pos-2" src="/19.32ff0ead.jpg" alt="Some image">
+						<img class="panel__img pos-3" src="/20.7b72d04f.jpg" alt="Some image">
+						<img class="panel__img pos-4" src="/21.8337e0bd.jpg" alt="Some image">
+						<img class="panel__img pos-5" src="/1.a45131b3.jpg" alt="Some image">
+						<img class="panel__img pos-6" src="/2.cccf08ef.jpg" alt="Some image">
+						<img class="panel__img pos-7" src="/3.3ef41889.jpg" alt="Some image">
+						<img class="panel__img pos-8" src="/4.0e5501ba.jpg" alt="Some image">
+						<img class="panel__img pos-9" src="/5.f63eb06a.jpg" alt="Some image">
+						<img class="panel__img pos-10" src="/6.a9c5f8cd.jpg" alt="Some image">
+						<img class="panel__img pos-11" src="/7.73eefc2c.jpg" alt="Some image">
+						<img class="panel__img pos-12" src="/8.b0eb1439.jpg" alt="Some image">
+						<img class="panel__img pos-13" src="/9.a268fd13.jpg" alt="Some image">
+						<img class="panel__img pos-14" src="/10.1c009a4e.jpg" alt="Some image">
+						<img class="panel__img pos-15" src="/11.d4f7927f.jpg" alt="Some image">
+						<img class="panel__img pos-16" src="/12.275532b2.jpg" alt="Some image">
+					</div>
+					<div class="details__content">
+						<h3 class="details__content-title oh"><span class="oh__inner">Ganymede</span></h3>
+						<p class="details__content-text">Incredible as this seems to our ordinary ideas, it is undoubtedly an understatement rather than an exaggeration of the true proportion as observed in the case of koilon.</p>
+						<a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a>
+					</div>
+				</div>
+				<button class="close close--details oh unbutton" aria-label="Close details"><span class="oh__inner">&#10005;</span></button>
+			</section>
 		</main>
-		<svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
-			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
-		</svg>
-		<script src="/js.00a46daa.js"></script>
+		<script src="/index.739bf03c.js" defer=""></script>
 	</body>
 </html>

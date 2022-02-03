@@ -1,12 +1,12 @@
-# Typography Motion Effect
+# Superfluid: Content Preview and Menu Animation
 
-The demo for the tutorial on how to recreate a letter stagger animation with GSAP and Splitting.js, based on [Thibaud Allie's](https://dribbble.com/thibaudallie) work as seen on [Dani Morales](http://www.danimorales-style.com/).
+A proof-of-concept reveal animation experiment on typographic elements as repeating pattern for a website design.
 
-![Typography Motion](https://tympanus.net/codrops/wp-content/uploads/2020/06/TypographyMotion_featured.jpg)
+![Image Title](https://tympanus.net/codrops/wp-content/uploads/2021/07/Superfluid_feat.jpg)
 
-[Article on Codrops](https://tympanus.net/codrops/?p=50136)
+[Article on Codrops](https://tympanus.net/codrops/?p=55661)
 
-[Demo](http://tympanus.net/Tutorials/TypographyMotion/)
+[Demo](http://tympanus.net/Development/SuperfluidLayout/)
 
 
 ## Installation
@@ -31,17 +31,16 @@ npm run build
 
 ## Credits
 
-- Recreation of the animation seen on http://www.danimorales-style.com/ designed by [Thibaud Allie](https://dribbble.com/thibaudallie).
-- Image by [Silviu Beniamin Tofan](https://unsplash.com/@tofansilviuben) from [Unsplash.com](https://unsplash.com/)
+- Images from [Unsplash](https://unsplash.com/)
 
-## Misc 
+## Misc
 
 Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
 
 ## License
 [MIT](LICENSE)
 
-Made with :blue_heart: by [Codrops](http://www.codrops.com)
+Made with :blue_heart:  by [Codrops](http://www.codrops.com)
 
 
 
